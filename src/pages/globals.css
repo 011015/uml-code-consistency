@@ -1,0 +1,7 @@
+body {
+  margin: 0;
+}
+.ant-tabs-content,
+.ant-tabs-tabpane {
+  height: 100%;
+}
