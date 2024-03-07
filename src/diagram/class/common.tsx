@@ -161,6 +161,16 @@ export function getNodeTemplate() {
     )
   );
 
+  const setFontStyle = (node: go.TextBlock) => {
+    console.log("node: ");
+    console.dir(node);
+    const height = node.actualBounds.height;
+    console.log("height: " + height);
+    const fontSize = Math.max(5, height * 0.75);
+    console.log(fontSize);
+    return `${fontSize}px sans-serif`;
+  };
+
   return $(
     go.Node,
     "Auto",
@@ -177,6 +187,9 @@ export function getNodeTemplate() {
     $(
       go.Panel,
       "Table",
+      new go.Binding("desiredSize", "desiredSize", go.Size.parse).makeTwoWay(
+        go.Size.stringify
+      ),
       { defaultRowSeparatorStroke: "black" },
       // header
       $(
@@ -186,9 +199,9 @@ export function getNodeTemplate() {
           columnSpan: 2,
           margin: 3,
           alignment: go.Spot.Center,
-          font: "bold 12pt sans-serif",
           isMultiline: false,
           editable: true,
+          font: "bold 12pt sans-serif",
         },
         new go.Binding("text", "name").makeTwoWay()
       ),

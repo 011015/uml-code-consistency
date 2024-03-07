@@ -4,6 +4,7 @@ import {
   getNodeTemplate,
   linkSelectionAdornmentTemplate,
 } from "./common";
+import { v4 as uuidv4 } from "uuid";
 
 const $ = go.GraphObject.make;
 
@@ -135,6 +136,12 @@ export function initDiagram() {
   myDiagram.model = new go.GraphLinksModel({
     linkCategoryProperty: "relationship",
     linkKeyProperty: "key",
+    makeUniqueKeyFunction: () => {
+      return uuidv4();
+    },
+    makeUniqueLinkKeyFunction: () => {
+      return uuidv4();
+    },
   });
 
   return myDiagram;

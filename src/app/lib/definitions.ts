@@ -6,6 +6,7 @@ export type NodeData = Node & {
     }
   >;
   location?: string;
+  desiredSize?: string;
 };
 export type Node = {
   key: string;
@@ -15,7 +16,7 @@ export type Node = {
 export type Property = {
   id: string;
   name: string;
-  type: string;
+  type?: string;
   visibility: "public" | "private" | "protected" | "package";
   default?: string;
   node_id: string;
@@ -23,7 +24,7 @@ export type Property = {
 export type Method = {
   id: string;
   name: string;
-  type: string;
+  type?: string;
   visibility: "public" | "private" | "protected" | "package";
   node_id: string;
 };

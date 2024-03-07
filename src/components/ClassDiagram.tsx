@@ -19,7 +19,7 @@ function getLinks() {
   });
 }
 
-function ClassDiagram() {
+function ClassDiagram(initNodes, initLinks) {
   const [nodes, setNodes] = useState<Array<NodeData>>([]);
   const [links, setLinks] = useState<Array<Link>>([]);
   const [json, setJson] = useState({});
@@ -75,7 +75,7 @@ function ClassDiagram() {
         initPalette={initPalette}
         divClassName="myDiagramPalette"
         style={{ height: "100%", width: 200 }}
-        nodeDataArray={[{ name: "className" }]}
+        nodeDataArray={[{ key: uuidv4(), name: "className" }]}
       />
       <Flex vertical style={{ flex: 1, height: "100%" }}>
         <ReactDiagram

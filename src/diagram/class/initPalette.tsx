@@ -111,6 +111,7 @@ export function initPalette() {
     linkKeyProperty: "key",
     nodeDataArray: [
       {
+        key: uuidv4(),
         name: "className",
       },
     ],
