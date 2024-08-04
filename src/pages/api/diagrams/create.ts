@@ -1,6 +1,5 @@
 "use server";
 import { sql } from "@/app/lib/sql-hack";
-import { Diagram } from "@/app/lib/definitions";
 import { NextApiRequest, NextApiResponse } from "next";
 
 async function createDiagram() {

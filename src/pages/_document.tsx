@@ -5,7 +5,11 @@ import type { DocumentContext } from "next/document";
 
 const MyDocument = () => (
   <Html lang="en">
-    <Head />
+    <Head>
+      <title>UML&Code Trace</title>
+      <meta name="description" content="软件架构设计图与代码追踪工具" />
+      <link rel="icon" href="/logo.png" />
+    </Head>
     <body>
       <Main />
       <NextScript />

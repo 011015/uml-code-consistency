@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+  .innerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 5px;
+    .editorContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      column-gap: 5px;
+      box-sizing: border-box;
+    }
+  }
+  .resContainer {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    column-gap: 5px;
+    overflow: hidden;
+    .list {
+      overflow: auto;
+    }
+    .output {
+      overflow: auto;
+    }
+  }
+}
+
+.selectContainer {
+  border-color: #2e75d3 !important;
+}
+
+.arrowOuterContainer {
+  position: relative;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  .arrowColumnContainer {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+    .columnArrow {
+      width: 100%;
+      height: 100%;
+      padding: 4px;
+      line-height: 100%;
+    }
+    .column-arrow {
+      &-open {
+        border-radius: 8px 0 0 8px;
+        border-right: 0;
+      }
+      &-close {
+        border-radius: 0 8px 8px 0;
+        border-left: 0;
+      }
+    }
+  }
+
+  .arrowRowContainer {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+    .rowArrow {
+      width: 100%;
+      height: 100%;
+      padding: 4px;
+      line-height: 100%;
+    }
+    .row-arrow {
+      &-open {
+        border-radius: 8px 8px 0 0;
+        border-bottom: 0;
+      }
+      &-close {
+        border-radius: 0 0 8px 8px;
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.diagram,
+.document,
+.code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.treeContainer {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.btnCode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}

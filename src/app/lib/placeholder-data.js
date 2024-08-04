@@ -40,7 +40,7 @@ const properties = [
     name: "balance",
     type: "Currency",
     visibility: "public",
-    default: "0",
+    default_value: "0",
     node_id: nodes[0].key,
   },
   {

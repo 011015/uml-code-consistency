@@ -47,7 +47,7 @@ async function seedProperties(client, properties) {
                 name VARCHAR(255) NOT NULL,
                 type VARCHAR(255) NOT NULL,
                 visibility VARCHAR(255) NOT NULL,
-                "default" VARCHAR(255),
+                default_value VARCHAR(255),
                 node_id UUID DEFAULT uuid_generate_v4() NOT NULL,
                 FOREIGN KEY (node_id)
                   REFERENCES nodes (key)
@@ -60,7 +60,7 @@ async function seedProperties(client, properties) {
     const insertedProperties = await Promise.all(
       properties.map(
         (properties) => client.sql`
-      INSERT INTO properties(id, name, type, visibility, "default", node_id)
+      INSERT INTO properties(id, name, type, visibility, default_value, node_id)
       VALUES (${properties.id}, ${properties.name}, ${properties.type}, ${properties.visibility}, ${properties.default}, ${properties.node_id})
       ON CONFLICT (id) DO NOTHING;
         `

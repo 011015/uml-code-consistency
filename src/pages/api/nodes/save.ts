@@ -16,7 +16,7 @@ async function saveNodes() {
                           'name', properties.name,
                           'type', properties.type,
                           'visibility', properties.visibility,
-                          'default', properties.default
+                          'default_value', properties.default_value
                       )
                   )
                   FROM properties
