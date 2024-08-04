@@ -7,4 +7,4 @@
 1. `npm i`
 2. `npm run dev`
 
-3. 为了获得图与代码间的追踪关系，此工具会访问另一个服务器，所以需要启动https://gitee.com/Banal_Corpulent_c8bb/uml-code-trace/tree/debug/服务器
+3. 此工具会访问另一个服务器以便获得图与代码间的追踪关系，所以需要启动另一个服务器https://gitee.com/Banal_Corpulent_c8bb/uml-code-trace/tree/debug/
