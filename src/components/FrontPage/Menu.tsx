@@ -34,7 +34,7 @@ const items: MenuItem[] = [
     "group"
   ),
   getItem(
-    <div style={{ paddingTop: 8 }}>CR(Class Diagram Recognize)</div>,
+    <div style={{ paddingTop: 8 }}>Class Diagram Recognize(CR)</div>,
     "CR",
     [
       { type: "divider" },
@@ -44,7 +44,7 @@ const items: MenuItem[] = [
     "group"
   ),
   getItem(
-    <div style={{ paddingTop: 8 }}>CT(Class Diagram Trace)</div>,
+    <div style={{ paddingTop: 8 }}>Class Diagram Trace(CT)</div>,
     "CT",
     [
       { type: "divider" },
@@ -54,7 +54,7 @@ const items: MenuItem[] = [
     "group"
   ),
   getItem(
-    <div style={{ paddingTop: 8 }}>SR(Sequence Diagram Recognize)</div>,
+    <div style={{ paddingTop: 8 }}>Sequence Diagram Recognize(SR)</div>,
     "SR",
     [
       { type: "divider" },
@@ -64,7 +64,7 @@ const items: MenuItem[] = [
     "group"
   ),
   getItem(
-    <div style={{ paddingTop: 8 }}>ST(Sequence Diagram Trace)</div>,
+    <div style={{ paddingTop: 8 }}>Sequence Diagram Trace(ST)</div>,
     "ST",
     [
       { type: "divider" },
